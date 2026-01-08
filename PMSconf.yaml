@@ -1,0 +1,1739 @@
+project_name: "The Smilist"
+dashboard:
+  columns:
+    - column: "Practice"
+      node: "_key"
+    - column: "Network Mode"
+      node: "network_mode"
+
+    - column: "IVF TYPE"
+      node: "ivf_type"
+    - column: "Clinic Name"
+      node: "clinic_name"
+  runtypes:
+    - title: "PMS extraction"
+      value: 1
+      checked: True
+    - title: "Extraction with carriers"
+      value: 2
+    - title: "Corrective review"
+      value: 3
+    - title: "Upload to PMS"
+      value: 4
+    - title: "Review fee"
+      value: 5
+    - title: "Review Already Rows"
+      value: 9
+    
+
+server: 1
+
+clinic_settings:
+  settings:
+    # TS01
+    HICKSVILLE:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "62d992a33d493877ab22d835"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Hicksville"
+    COMMACK:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "62d992103d493877ab22d833"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Commack"
+    WANTAGH:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "62d994db3d493877ab22d837"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Wantagh"
+    FISHKILL:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "63370408bdb80603c72ef075"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Fishkill"
+    MEDFORD:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "63370408bdb80603c72ef076"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Medford"
+    # HUNTINGTON:horizon
+    #   spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+    #   clinic_id: "627945669ad05aa00c83f8a2"
+    #   clinic_name: "The smilist 01"
+    #   network_mode: "INN"
+    #   ivf_type: "New"
+    #   office: "Huntington"
+    #   09/04/2024 - it stopped being verified
+    AMITYVILLE:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "6345af4c8b995c1145794b36"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Amityville"
+    GARDENCITY:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "6345af4c8b995c1145794b37"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Garden City"
+    BALDWINSVI:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "68153e94aea3601f7e3c2502"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Baldwinsville"
+    CATSKILL:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "687944dc8c49582a341bbb62"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Catskill"
+    NEWPALTZ:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "687944dc8c49582a341bbb63"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "New Paltz"
+    POUGHKEEPS:
+      spreadsheet_id: "1yVdPiyCLcaR_owZg4yjq4Fi8qs-8pfLzRrtlYswGr2Q"
+      clinic_id: "627945669ad05aa00c83f8a2"
+      clinic_name: "The smilist 01"
+      practice_id : "687944dc8c49582a341bbb64"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Poughkeepsie"
+    # TS02
+    EASTISLIP:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "631b504f21a592145f120512"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "East Islip"
+    NORTHBABYL:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "631b505021a592145f120514"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "North Babylon"
+    VALLEYSTRM:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "631b505021a592145f120517"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Valley Stream"
+    WHITEPLAIN:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "631b505021a592145f120519"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "White Plains"
+    RVC:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "631b505021a592145f120515"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Rockville Centre"
+    SMITHTOWN:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "631b505021a592145f120516"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Smithtown"
+    MATTITUCK:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "639224697450c73da65b02a7"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Mattituck"
+    PORTWASH:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "63a3b33c9315b23772729fc3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Port Washington"
+    ALLERTON:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "63a3b33c9315b23772729fc4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Allerton"
+    HERALDSQ:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "6345af4c8b995c1145794b34"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Herald Square"
+    SYOSSET:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "6345af4d8b995c1145794b39"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Syosset"
+    AMHERST:
+      spreadsheet_id: "1kfMBlJ0bjhx9tS_9h9fvXm20yndwOXNjAAFfj7nCfV8"
+      clinic_id: "631773d6d07342a19b939171"
+      clinic_name: "The smilist 02"
+      practice_id : "676063464eff4f0f871e4a32"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Amherst"
+    # TS03
+    MASSAPEQUA:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "6324900dacfdc72cc457bb34"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Massapequa"
+    GREENPOINT:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "6324900dacfdc72cc457bb35"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Greenpoint"
+    WOODSIDE:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "6324900dacfdc72cc457bb36"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Woodside"
+    WHITESTONE:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "633703cbbdb80603c72ef073"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Whitestone"
+    JAMESPORT:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "633703cbbdb80603c72ef072"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Jamesport"
+    RIVERHEAD:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "633703cbbdb80603c72ef074"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Riverhead"
+    # BAYSHORE:
+    #   spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+    #   clinic_id: "6320a94f8c47e3e1659e3412"
+    #   clinic_name: "The smilist 03"
+    #   network_mode: "INN"
+    #   ivf_type: "New"
+    #   office: "Bay shore"
+    #   09/03/2024 - it stopped being verified
+    # MALVERNE:
+    #   spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+    #   clinic_id: "6320a94f8c47e3e1659e3412"
+    #   clinic_name: "The Smilist 03"
+    #   network_mode: "INN"   
+    #   ivf_type: ""
+    NEWCITY:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "6362b9c1ebba11537600b827"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "New City"
+    STATENISLD:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "6374f8ec00260b42b935b085"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Staten Island"
+    SMITHTO_OS:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "66a903c142eaf0058b47d552"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Smithtown OS"
+    WESTSENEC:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "676063464eff4f0f871e4a33"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "West Seneca"
+    CENTRALSQ:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "68153e94aea3601f7e3c2503"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Central Square"
+    SOLVAY:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "68153e94aea3601f7e3c2504"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Solvar"
+    HYDEPARK:
+      spreadsheet_id: "1hfnj0hJxBaJQlx0Y5AZRA_D59Pg4LKzlbRTnMky2tIE"
+      clinic_id: "6320a94f8c47e3e1659e3412"
+      clinic_name: "The smilist 03"
+      practice_id : "687944dc8c49582a341bbb65"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Hyde Park"
+    # TS04
+    ENC_JACKS:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "63a3b33c9315b23772729fc7"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Jackson"
+    JACKSON:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "63a3b33c9315b23772729fc6"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Jackson"
+    ENC_LACEY:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "639223fe7450c73da65b02a2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Lacey"
+    LACEY:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "639223fe7450c73da65b02a2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Lacey"
+    ENC_SHREWS:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6362b9c1ebba11537600b822"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Shrewsbury"
+    SHREWSBURY:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6362b9c1ebba11537600b823"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Shrewsbury"
+    ENC_BRICK:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "639224697450c73da65b02a5"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Brick"
+    BRICK:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "639224697450c73da65b02a6"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Brick"
+    LINWOOD:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6744f0d2c8ffd4656c1d1da2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Linwood"
+    OLD_LINWOO:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6744f0d2c8ffd4656c1d1da2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Linwood"
+    HADDONHEIG:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6744f0d3c8ffd4656c1d1da3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Haddonheig"
+    OLD_HADDON:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6744f0d3c8ffd4656c1d1da3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Haddonheig"
+    BLACKWOOD:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6744f0d3c8ffd4656c1d1da4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Blackwood"
+    #   09/27/2024 - it stopped being verified
+    # CHESTER:
+    #   spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+    #   clinic_id: "634489d2f2cdf2b4212365ad"
+    #   clinic_name: "The smilist 04"
+    #   network_mode: "INN"
+    #   ivf_type: "New"
+    #   office: "Chester"
+    CLIFTON:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6362b9c1ebba11537600b825"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Clifton"
+    SEWELL:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "6374f8ec00260b42b935b084"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Sewell"
+    MEDFORDNJ:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "67ca0550b65a8f405c4189d2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "MedfordNJ"
+    MOORESTOWN:
+      spreadsheet_id: "1XZ7jhnaSrsdQzSCAcaOTBcudvgsWl4E2Wj6-T-L9-Pg"
+      clinic_id: "634489d2f2cdf2b4212365ad"
+      clinic_name: "The smilist 04"
+      practice_id : "67ca0550b65a8f405c4189d3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Moorestown"
+    # TS05
+    ELIZABETH:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "63a3b33c9315b23772729fc2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Elizabeth"
+    ENGLISHTOW:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "62d9927f3d493877ab22d834"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Englishtown"
+    #    GARWOOD:
+    #      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+    #      clinic_id: "645bb62d036d615d2ab29a0c"
+    #      clinic_name: "The Smilist 05"
+    #      network_mode: "INN"
+    #      ivf_type: ""
+    HOBOKEN:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "646e3827b8d2d711cf321bd4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Hoboken"
+    MOUNTAINSD:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "6324900dacfdc72cc457bb32"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Mountainside"
+    SOMERSET:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "6345af4c8b995c1145794b32"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Somerset"
+    TOMSRIVER:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "6374f8eb00260b42b935b082"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Toms River"
+    ENC_TOMS:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "65808b68ffca66132e4456c3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Toms River"
+    LIVINGSTON:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "65282fcd89f1f12f973cfb82"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Livingston"
+    CHERRYHILL:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "673225003d707b7cd873b0b2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "CherryHill"
+    OLD_CHERRY:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : ""
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Old_Cherry"
+    MARLTON:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "673225003d707b7cd873b0b3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Marlton"
+    OLD_MARLTO:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : ""
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Old_Marlto"
+    GIBBSBORO:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "673225003d707b7cd873b0b4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Gibbsboro"
+    OLD_GIBBS:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : ""
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Old_Gibbs"
+    RAHWAY:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67ca0551b65a8f405c4189d4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Rahway"
+    RANCOCAS:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67ca0551b65a8f405c4189d5"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Rancocas"
+    BRIDGETON:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67dc78bab4aefa33b85893b2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Bridgeton"
+    DAYTON:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67dc78bab4aefa33b85893b3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Dayton"
+    HAMILTONSQ:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67dc78bab4aefa33b85893b4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Hamilton Square"
+    LAWRENCEVI:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67dc78bab4aefa33b85893b5"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Lawrenceville"
+    LAKEWOOD:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67f97c00d8b24031747ca254"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Lakewood"
+    MANAHAWKIN:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "67f97c00d8b24031747ca255"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Manahawkin"
+    # TS06
+    WHARTFORD:
+      spreadsheet_id: "13_HUlLKk-GDxlqBZ801_QLmhF_XPVgss4bzT_Ucq_c8"
+      clinic_id: "647a6849264fde496a113ab1"
+      clinic_name: "The smilist 06"
+      practice_id : "6491f298f6e7591b45246943"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "West Hartford "
+    DANBURY:
+      spreadsheet_id: "13_HUlLKk-GDxlqBZ801_QLmhF_XPVgss4bzT_Ucq_c8"
+      clinic_id: "647a6849264fde496a113ab1"
+      clinic_name: "The smilist 06"
+      practice_id : "6491f298f6e7591b45246942"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Danbury"
+    CROMWELL:
+      spreadsheet_id: "13_HUlLKk-GDxlqBZ801_QLmhF_XPVgss4bzT_Ucq_c8"
+      clinic_id: "647a6849264fde496a113ab1"
+      clinic_name: "The smilist 06"
+      practice_id : "65ef65fe88c97b2def49dc32"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Cromwell"
+    BOSTON:
+      spreadsheet_id: "13_HUlLKk-GDxlqBZ801_QLmhF_XPVgss4bzT_Ucq_c8"
+      clinic_id: "647a6849264fde496a113ab1"
+      clinic_name: "The smilist 06"
+      practice_id : "67114b8e53e0ff7a66418a52"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Boston"
+    WELLESLEY:
+      spreadsheet_id: "13_HUlLKk-GDxlqBZ801_QLmhF_XPVgss4bzT_Ucq_c8"
+      clinic_id: "647a6849264fde496a113ab1"
+      clinic_name: "The smilist 06"
+      practice_id : "67114b8e53e0ff7a66418a53"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Wellesley"
+    # TS07
+    BELLEROSE:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "649b4ef12d66892e6c0721e2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Bellerose"
+    BRKHEIGHTS:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "646e3827b8d2d711cf321bd8"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Brooklyn"
+    ENDOCOMMAC:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "649b4ef12d66892e6c0721e3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Commack (Endo)"
+    EASTMEADOW:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "646e3826b8d2d711cf321bd3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "East Meadow"
+    MIDDLEISL:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "62d994ae3d493877ab22d836"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Middle Island"
+    TDCMIDDLEI:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "649b4ef12d66892e6c0721e4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "TDC Middle Island"
+    WASHSQPARK:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "646e3827b8d2d711cf321bd7"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Washington Square Park"
+    NFLUSHING:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "64d3ebe64b07842e9f3ac5b2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Flushing"
+    NFLUSHING2:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "64d3ebe64b07842e9f3ac5b3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Flushing"
+    NEWWINDSOR:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "646e3827b8d2d711cf321bd5"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "New Windsor"
+    YONKERS:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "6494a1f7d625286499429962"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "yonkers"
+    5THAVENUE:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "646e3827b8d2d711cf321bd9"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "5th Ave"
+    WADINGRVR:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "64b06d11f9094a4d1f6d3693"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Wading River"
+    BUFFALO:
+      spreadsheet_id: "1_NG6r4XuqToeWZu-oInNs9EAnj8l5UyJAoLK6KLuYV8"
+      clinic_id: "649a0a94283c12594050d2be"
+      clinic_name: "The smilist 07"
+      practice_id : "676063464eff4f0f871e4a34"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Buffalo"
+    # TS08
+    WAYNE:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "64b06d10f9094a4d1f6d3692"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Wayne, PA"
+    SOUDERTON1:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "63a3b33c9315b23772729fc5"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Souderton"
+    SOUDERTOLD:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "651314fc829818353f244602"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Souderton"
+    BLUEBELL:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "65c3a15b32394465af5187c3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Blue Bell"
+    MEDIA:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "65d63bbea08848502c3b4ef2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Media"
+    WESTCHESTE:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "65d63bf3a08848502c3b4ef3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "West Chester"
+    WARMINSTER:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "646e3827b8d2d711cf321bd6"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Warminster"
+    SHILLINGTO: 
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "66fad0641357fb1d2a16d422"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Shillingto"
+    OLD_SHILLI:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "66fad0641357fb1d2a16d423"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Old Shilli"
+    ACADEMY:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "679cfcdd9ca9890c7c2fe842"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Academy"
+    BRINTONLAK:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "67b75eb58a37d227c152a5a3"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Brintonlak"
+    SPRINGFIEL:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "67b75eb58a37d227c152a5a4"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Springfiel"
+    WOODLYN:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "67b75eb58a37d227c152a5a5"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Woodlyn"
+    ELKINSPARK:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "67b75eb58a37d227c152a5a6"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Elkinspark"
+    DOYLESTOWN:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "67f97c00d8b24031747ca252"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Doylestown"
+    LANGHORNE:
+      spreadsheet_id: "10WfNH_UvkkO9_iyhHkKZdx5_yeP-nSKAnOatFCnG9q0"
+      clinic_id: "64ff9d237dca568e08336ad9"
+      clinic_name: "The smilist 08"
+      practice_id : "67f97c00d8b24031747ca253"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Langhorne"
+    # TS09      
+    WILMINGTON:
+      spreadsheet_id: "17ndjuuz75kNDx-toRiIkwqWv63BuJhvUHm4GsAx8G7Y"
+      clinic_id: "67893bd3c783ef8130b5e198"
+      clinic_name: "The smilist 09"
+      practice_id : "65808b68ffca66132e4456c2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Wilmington"
+    BOONSBORO:
+      spreadsheet_id: "17ndjuuz75kNDx-toRiIkwqWv63BuJhvUHm4GsAx8G7Y"
+      clinic_id: "67893bd3c783ef8130b5e198"
+      clinic_name: "The smilist 09"
+      practice_id : "67917069936b4533282a4d22"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Boonsboro"
+    EDGEWATER:
+      spreadsheet_id: "17ndjuuz75kNDx-toRiIkwqWv63BuJhvUHm4GsAx8G7Y"
+      clinic_id: "67893bd3c783ef8130b5e198"
+      clinic_name: "The smilist 09"
+      practice_id : "6791706a936b4533282a4d24"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Edgewater"
+    MIDDLETOWN:
+      spreadsheet_id: "17ndjuuz75kNDx-toRiIkwqWv63BuJhvUHm4GsAx8G7Y"
+      clinic_id: "67893bd3c783ef8130b5e198"
+      clinic_name: "The smilist 09"
+      practice_id : "6791706a936b4533282a4d23"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Middletown"
+    FREDERICK:
+      spreadsheet_id: "17ndjuuz75kNDx-toRiIkwqWv63BuJhvUHm4GsAx8G7Y"
+      clinic_id: "67893bd3c783ef8130b5e198"
+      clinic_name: "The smilist 09"
+      practice_id : "684c4c6d9439dc2c7356eba2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Frederick Maryland"
+    # TS10
+    PINEST:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "689f60dc69975c3658000d05"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Pine St"
+    WAPPNGRFLL:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "689f60db69975c3658000d02"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Wappingers Falls"
+    PINEBUSH:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "689f60db69975c3658000d03"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Pine Bush"
+    LOUDONVILL:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "689f60db69975c3658000d04"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Loudonville"
+    REDHOOK:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "68c4438e6eb3702f08753132"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Red hook"
+    CLIFTONPRK:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "68c4438e6eb3702f08753133"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Clifton Park"
+    ALTAMONT:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "68c4438e6eb3702f08753134"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Altamont"
+    HURLEYAVE:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "68c4438e6eb3702f08753135"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Kingston hurley"
+      
+
+    # to test !!
+    # NEWWINDSOR:
+    #   spreadsheet_id: "11JIDkm7yQovWGIAYKwUfANYprvij349jqSzv-4BjPnk"
+    #   clinic_id: "633b217d1c6f4403a45c65b8"
+    #   clinic_name: "Test-The smilist"
+    #   network_mode: "INN"
+    #   
+    #   ivf_type: "New"
+    #   office: "New Windsor"
+    # SOUDERTOLD:
+    #   spreadsheet_id: "11JIDkm7yQovWGIAYKwUfANYprvij349jqSzv-4BjPnk"
+    #   clinic_id: "633b217d1c6f4403a45c65b8"
+    #   clinic_name: "Test-The smilist"
+    #   network_mode: "INN"
+    #   
+    #   ivf_type: "New"
+    #   office: "Souderton"
+
+
+app:
+  search_exclude: "Downloads,Documents,binaries,modules,Cache,Temp,Roaming,$Recycle.Bin,WinSxS,System,SystemResources,.vscode,servicing,assembly"
+  executable: "C:/Program Files (x86)/DXONE/Office.exe"
+  pms_excuteName: "Apptbook.exe"
+  type: "desktop"
+  main_app:
+    login: "Password - Appointments, Open"
+    pms_executeName: "Apptbook.exe"
+    pms_name: "Dentrix Appointment Book"
+  famFile:
+    pms_executeName: "Famfile.exe"
+    pms_name: "Dentrix Family File"
+  documentCenter:
+    pms_executeName: "Document.Center.exe"
+    pms_name: "Dentrix Document Center"
+  applist:
+    pms_executeName: "ApptList.exe"
+    pms_name: "Dentrix Appointment List"
+  version: 17
+
+columns:
+  - column: "Practice"
+    key: practice
+    dbsrc: "clinic_name"
+
+  - column: "Carrier Name"
+    key: carrier_name
+    src: "PIns_Name"
+    dbsrc: "insurance_company_name"
+    extration_encode: True
+
+  - column: "MemberID"
+    key: member_id
+    src: "PrSubID"
+    dbsrc: "subscriber_id"
+
+  - column: "Subscriber Zip Code"
+    src: "Zip"
+    dbsrc: "subscriber_zip_code"
+
+  - column: "Subscriber First Name"
+    dbsrc: "guarantor_first_name"
+
+  - column: "Subscriber Last Name"
+    dbsrc: "guarantor_last_name"
+
+  - column: "Subscriber DOB"
+    dbsrc: "guarantor_date_of_birth"
+    
+  - column: "Patient First Name"
+    src: "FName"
+    dbsrc: "patient_first_name"
+
+  - column: "Patient Last Name"
+    src: "LName"
+    dbsrc: "patient_last_name"
+
+  - column: "Patient DOB"
+    src: "BirthDate"
+    dbsrc: "patient_date_of_birth"
+
+  - column: "Relationship to Subscriber"
+    key: relationship
+    dbsrc: "relation_to_subscriber"
+
+  - column: "Insurance Verification Process Results"
+    key: iv_process_result
+
+  - column: "Insurance Verification Status"
+    key: verification_status
+    
+  - column: "Type of Verification"
+
+  - column: "Patient ID in the PMS"
+    key: patient_id
+    src: "Chart"
+    dbsrc: "patient_chart_id"
+
+  - column: "Plan ID in the PMS"
+
+  - column: "Subscriber ID In The PMS"
+    key: subs_id
+    
+  - column: "Upload Status"
+    key: upload_status
+
+  - column: "Primary"
+    key: ordinal
+    dbsrc: "insurance_order"
+
+  - column: "Final Audit"
+    key: final_audit
+    
+  - column: "URL Drive"
+    key: urls
+
+  - column: "Amounts"
+    src: "amounts"
+
+  - column: "Appointment Date"
+    src: "Appt_Time"
+    dbsrc: "appointment_datetime"
+
+  - column: "Employer Name PMS"
+    dbsrc: "patient_employer_name"
+
+  - column: "GroupName"
+    dbsrc: "insurance_group_name"
+
+  - column: "Group Number"
+    dbsrc: "insurance_group_number"
+
+  - column: "Extraction Datetime"
+
+  - column: "Extraction Logs"
+    key: extraction_logs
+    dbsrc: "provider_id"
+
+  - column: "Logs"
+    key: log
+
+  - column: "Last Eligibility Check"
+    dbsrc: "last_eligibility_check"
+    key: last_eligibility
+
+  - column: "Office"
+    dbsrc: "benefits_renewal"
+  
+  - column: "Files(s) Name"
+    key: docs
+
+shortCarriersNames:
+  Emblem: EMBLEM
+  Dentaquest: DQ
+  New Dentaquest: DQ
+  Cigna API: Cigna
+  Lincoln Financial: LF
+  New BCBS: BCBS
+  Anthem BCBS: BCBS
+  MetLife: MET
+  Premera: PREM
+  Geha: GEHA
+  Delta Dental Toolkit API: DD Toolkit
+  Delta Dental Ins: DD INS
+  Delta Dental of Colorado: DD CO
+  Delta Dental of IA: DD IA
+  Delta Dental MA: DD MA
+  Delta Dental of VA: DD VA
+  Delta Dental of AK: DD AK
+  Delta Dental of AR API: DD AR
+  Delta Dental of KS: DD KS
+  Delta Dental of ID: DD ID
+  Delta Dental of IL: DD IL
+  Delta Dental of Illinois: DD IL
+  Delta Dental of WI: DD WI
+  Delta Dental of Wisconsin: DD WI
+  Delta Dental WY: DD WY
+  Delta Dental of SC: DD SC
+  Delta Dental Of Rhode Island: DD RI
+  Delta Dental of Missouri: DD MO
+  Delta Dental of OR: DD OR
+  Delta Dental of OK: DD OK
+  Delta Dental of NJ API: DD NJ
+  Delta Dental of WA API: DD WA
+  Delta Dental National: DD NAT
+  Delta Dental Ins National: DD INS NAT
+  Principal: PRINC
+  Sunlife: SUN
+  Aetna: AETNA
+  Ameritas: AMERITAS
+  United Concordia: UC
+  Humana Availity: HUMANA
+  Humana TeamCare: TEAMCARE
+  EBMS: EBMS
+  DNOA API: DNOA
+  FEP Dental Blue: FEPB
+  Guardian: Guardian
+  Healthplex: HPLX
+  Horizon BCBS: HORIZON
+  United HealthCare: UHC
+  UHC Medicaid: UHC MED
+  Skygen: SKYGEN
+  CSEA: CSEA
+  ASO SIDS: ASO SIDS
+  JJStanis: JJSTANIS
+  Caresource: HORIZON NJ
+  Delta Dental of OR FBD: DD OR FBD
+  Delta Care USA: DC USA
+  Sunlife Dentaquest: SL DQ
+  BCBS of TN: BCBS TN
+  Solstice: SOLSTICE
+  New Geha: NEW GEHA
+  Dominion: DOMINION
+  Meritain Health: MERITAIN HEALTH
+  Care First: CARE FIRST
+  UMR: UMR
+  Liberty Dental Plan: LIBERTY DP
+  Always Assist: ALWAYS ASSIST
+  Excellus: EXCELLUS
+  Fidelio Dental: FIDELIO DENTAL
+  Nova: Nova
+ 
+city_names: ["JOHNSTON","Stevens Point","Mechanicsburg","Glen Mills", "Rocky Hill", "Clinton","Belleville","Farmington Hills", "Aberdeen", "Abilene", "Chaltanooga","Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Highland Mills", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "Middletown", "Meriden", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Windsor", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "New Milford", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Wethersfield", "West Haven", "Washington", "Waterbury", "Waterloo", "West Covina", "West Hartford", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Weston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown","Alpharetta","Lisle","Eagan","Latham"]
+
+
+encode_results: False
+upload_column: "R"
+advance_days: []
+business_days: "Mon,Tue,Wed,Thu,Fri,Sat,Sun"
+
+extraction_services:
+  type_verification_rules:
+    FBD:
+      months:
+    ELG:
+      months: 1
+  report:
+  check_docs_puloaded:
+  data_to_extract:
+  dambury_rule: false
+
+time_to_close_pms_in_sec: 6000
+isExtractionTypeReport: False
+
+input_wrapper_services:
+  update_phone_in_insurance_plan_information: True
+  update_payer_default: True
+  review_overlap: True
+  select_default_table:
+    state: True
+    table: ".*Coverage"
+  contact_info_set_deafault:
+    state: True
+    mobile_default: "999-999-9999"
+    home_email_default: "declined@thesmilist.com"
+  select_default_provider:
+    state: False
+  update_amounts:
+    maximum:
+      individual: True
+      family: True
+      ortho_plan: False
+    deductible:
+      lifetime_individual: False
+      annual_individual: True
+      preventive_annual_individual: True
+      annual_family: True
+    deductibleMet:
+      annual_individual: True
+      ben_individual: True
+
+  update_coverage_table: True
+  clear_table: True
+  select_category: False
+  coverage_note: True
+
+  update_eligibility_dates:
+    signature_on_file: False
+    plan_effective_date: True
+    not_eligibility_box: True
+    last_eligibility_check: True
+    eligibility_start: True
+    eligibility_end: True
+  appointment_note:
+    state: False
+    template: ""
+  coverage_table_note:
+    state: True
+    default_note: "Please see most recent patient insurance verification breakdown form in Document Center for additional details."
+  employer_process:
+    verified_employer: True
+    create_employer: True
+    update_employer: True
+
+  update_groupname: False
+  update_member_relationship : True
+
+input_wrapper:
+files_format:
+  FBD: "Insurance verification {0} {1}.pdf"
+  ELG: "Eligibility status {0} {1}.pdf"
+
+write_back_rules:
+  deductible:
+    default: "S"
+    Basic: "S"
+    Major: "S"
+    Ortho: "S"
+    Preventive: "P"
+
+  template:
+    - ["beg_proc", "end_proc", "category"]
+    - ["D0100", "D0209", "Diag Prev"]
+    - ["D0210", "D0210", "Full mo XRays"]
+    - ["D0211", "D0219", "Diag Prev"]
+    - ["D0220", "D0220", "Periapical Xray"]
+    - ["D0221", "D0271", "Diag Prev"]
+    - ["D0272", "D0272", "Two BiteWings"]
+    - ["D0273", "D0273", "Diag Prev"]
+    - ["D0274", "D0274", "Four BiteWings"]
+    - ["D0275", "D0329", "Diag Prev"]
+    - ["D0330", "D0330", "Panoramic Film"]
+    - ["D0331", "D0430", "Diag Prev"]
+    - ["D0431", "D0431", "Oral Cancer Scr"]
+    - ["D0432", "D1109", "Diag Prev"]
+    - ["D1110", "D1110", "Prophylaxis Adu"]
+    - ["D1111", "D1119", "Diag Prev"]
+    - ["D1120", "D1120", "Prophylaxis Chi"]
+    - ["D1121", "D1205", "Diag Prev"]
+    - ["D1206", "D1206", "Varnish"]
+    - ["D1207", "D1207", "Preventative"]
+    - ["D1208", "D1208", "Flouride"]
+    - ["D1209", "D1350", "Preventative"]
+    - ["D1351", "D1351", "Sealants"]
+    - ["D1352", "D1999", "Preventative"]
+    - ["D2000", "D2390", "Basic Res"]
+    - ["D2391", "D2391", "Resin-based com"]
+    - ["D2392", "D2399", "Basic Res"]
+    - ["D2400", "D2609", "Crowns"]
+    - ["D2610", "D2610", "Inlay"]
+    - ["D2611", "D2641", "Crowns"]
+    - ["D2642", "D2642", "Onlay"]
+    - ["D2643", "D2899", "Crowns"]
+    - ["D2900", "D2920", "Other rest"]
+    - ["D2921", "D2949", "Other rest"]
+    - ["D2950", "D2954", "CBU/post core"]
+    - ["D2955", "D2999", "Other rest"]
+    - ["D3000", "D3999", "Endodontics"]
+    - ["D4000", "D4262", "Periodontics"]
+    - ["D4263", "D4263", "Perio Bone Graf"]
+    - ["D4264", "D4345", "Periodontics"]
+    - ["D4346", "D4346", "Scaling w infla"]
+    - ["D4347", "D4354", "Periodontics"]
+    - ["D4355", "D4355", "Full mth debrid"]
+    - ["D4356", "D4380", "Periodontics"]
+    - ["D4381", "D4381", "Arestin"]
+    - ["D4382", "D4909", "Periodontics"]
+    - ["D4910", "D4910", "Perio Maint"]
+    - ["D4911", "D4920", "Periodontics"]
+    - ["D4921", "D4921", "Gingival irriga"]
+    - ["D4922", "D4999", "Periodontics"]
+    - ["D5000", "D5899", "Prosth, Remov"]
+    - ["D5900", "D5999", "Maxillo Prosth"]
+    - ["D6000", "D6056", "Implants"]
+    - ["D6057", "D6057", "Implant abutmen"]
+    - ["D6058", "D6058", "Implants"]
+    - ["D6059", "D6059", "Implant Crown"]
+    - ["D6060", "D6103", "Implants"]
+    - ["D6104", "D6104", "Bone graft w im"]
+    - ["D6105", "D6199", "Implants"]
+    - ["D6200", "D6999", "Prostho fixed"]
+    - ["D7000", "D7950", "Oral Surgery"]
+    - ["D7951", "D7951", "Bone Graft- Lat"]
+    - ["D7952", "D7952", "Sinus Augmentat"]
+    - ["D7953", "D7953", "Bone Graft-Ridg"]
+    - ["D7954", "D7999", "Oral Surgery"]
+    - ["D8000", "D8999", "Ortho"]
+    - ["D9000", "D9109", "Adj gen serv"]
+    - ["D9110", "D9110", "Palliative TX"]
+    - ["D9111", "D9220", "Adj gen serv"]
+    - ["D9221", "D9230", "General Anes"]
+    - ["D9231", "D9238", "Adj gen serv"]
+    - ["D9239", "D9243", "IV sedation"]
+    - ["D9244", "D9309", "Occlusal/Night"]
+    - ["D9310", "D9310", "Consultation"]
+    - ["D9311", "D9943", "Occlusal/Night"]
+    - ["D9944", "D9944", "Occlusal Guard"]
+    - ["D9945", "D9945", "Occlusal/Night"]
+    - ["D9946", "D9999", "Adj gen serv"]
+
+  update_table:
+    table_columns:
+      ["Beg Proc", "End Proc", "Category", "Cov %", "Ded", "Co-Pay", "Pre Est?"]
+    version: "Custom"
+    columns_to_update: [4]
+    template_columns: [1, 2, 3]
+
+  table_rules:
+    type: "category"
+    fill_by_category: True
+    fill_by_service: True
+    value: "high"
+    range_cov: "hight"
+    order: "default"
+    
+    assigned_values:
+      D0100-D0209: Preventive
+      D0211-D0219: Preventive
+      D0221-D0271: Preventive
+      D0273-D0273: Preventive
+      D0275-D0329: Preventive
+      D0331-D0430: Preventive
+      D0432-D1109: Preventive
+      ^Crowns: D2740
+      ^Other rest: Basic
+      ^Endodontics: Endodontic
+      ^Periodontics.*: Periodontal
+      D5000-D5899: Major
+      D6105-D6199: D6010
+      ^Oral Surgery: OralSX
+      ^Ortho: Orthodontic
+      ^General Anes: Basic
+      ^(Adj|IV).*: Major
+
+    optional_values:
+      ^(Inlay|Onlay|CBU/post core): D2740|Major
+      ^Endodontics: Major
+      ^(Periodontics|Perio Bone Graf|Scaling w infla|Full mth debrid|Arestin|Perio Maint|Gingival irriga).*: Periodontal|Major
+      ^(Implants|Bone graft w im)$: D6010|Major
+      ^(Oral Surgery|Bone Graft-|Sinus Augmentat).*: OralSX|Major
+      ^Occlusal: Major
+      ^Consultation: Major
+
+    services:
+      Preventive:
+        - preventive
+        - diagnostic
+        - bitewing
+        - periapical
+        - exam
+        - panorex
+        - prophylaxis
+      Basic:
+        - amalgam
+        - fillings
+      Major:
+        - major
+        - implant
+        - prosthodontics
+        - prosthetics
+        - anesthesia
+        - bridge
+        - prosth
+        - maxillo
+        - crowns
+        - inlay
+        - onlay
+        - CBU
+        - palliative
+        - consultation
+        - occlusal
+
+  amounts:
+    default_values:
+      99999: ["AnnualMaximum"]
+      0.00: ["AmountUsedToDate", "Deductible", "Family", "Met_Deductible"]
+    default_regex: "no|\\$NaN|not covered|unlimited|none|n/a|-|no cigna dppo advantage deductible|this program has no deductibles.|not applicable|n/avail|not available|info not available|deductible does not apply|there is no deductible for this contract"
+    exceptions_regex: "Empty"
+    regex_unlimited: "none|unlimited|Unlimited|$9,999,999.99|$9999999.99|$99,999,999.99"
+    calculated_values:
+      AmountRemaining: "{AnnualMaximum} - {AmountUsedToDate}"
+      DeductibleRemaining: "{Deductible} - {Met_Deductible}"
+
+    max_valued_supported: 99999
+    values:
+      - AnnualMaximum
+      - AmountUsedToDate
+      - Deductible
+      - Family
+      - Met_Deductible
+      - DeductiblePreventive
+    format_number: "{:.2f}"
+
+extraction:
+  general_configuration:
+    check_docs_uploaded: True
+  type_verification:
+    status_print: True
+
+NoVerifyClinic : True
+
+hmoRules:
+  hmoAbbreviation: True
+  clinicsINN:
+    - BELLEROSE
+    - BOONSBORO
+    - BRICK
+    - CLIFTON
+    - ENDOCOMMAC
+    - EASTISLIP
+    - ENGLISHTOW
+    - 5THAVENUE
+    - JACKSON
+    - LACEY
+    - MEDFORD
+    - NEWWINDSOR
+    - SHREWSBURY
+    - STATENISLD
+    - TDCMIDDLEI
+    - TOMSRIVER
+    - WARMINSTER
+    - WILMINGTON
+    
+elg_clinic:
+  Dentaquest:
+    - MATTITUCK
+  Skygen_NY:
+    - AMITYVILLE
+    - FISHKILL
+    - HICKSVILLE
+    - HUNTINGTON
+    - MASSAPEQUA
+    - NEWCITY
+    - NORTHBABYL
+    - SMITHTOWN
+    - WANTAGH
+    - WHITESTONE
+    - YONKERS
+  Skygen_DUALNY:
+    - AMITYVILLE
+    - BELLEROSE
+    - HICKSVILLE
+    - HUNTINGTON
+    - MASSAPEQUA
+    - SMITHTOWN
+    - WHITESTONE
+  Skygen_NJ:
+    - CLIFTON
+    - ENGLISHTOW
+    - MOUNTAINSD
+    - CHESTER
+  All_Clinics:
+    - Caresource
+  
+elg_carriers_clinic: "(?i)^(((United( )?Health( )?Care|UHC|AZUHC)( ?(-?Comm(unity)?)( ?Plan?)?| Delaware)|UHC ?CP.*)|(Delta )?(Dental|Delta).*(KY|Kentucky).*)$|(?i)^ ?(denta quest|dentaquest)|(?i)^((Horizon )?(NJ )(health)).*$"
+ 
+no_actions_rules:
+  regex_carrier:   '(?i)^((dental\s?(save|call\s?discount)|(employe(e|r)?\s?|employe(e|r)?\s?family)).*plan\s?|(?:.*\s?self\s?pay\s+\w+)|(IDG(?:\s?.*))|(Smylen.*)|(self\spay\s+\w+.*(?:\s+(?:sewell|dentrix|NY\s+NJ))?)|(?:smilist|encore).*((?:one|one\s.*)|of\s?wilmington)|(edp(?:\s?.*)|(.*\s)?kleer(?:\s?.*)|AVS(?:\s?.*)|cigna\s?oon|(?:empty\s?|empty\(blank\)\s?))|(sewell\s?private\spay)|(no\s?insurance\s?company)|(Aetna\s?(?:Savings|Vital\s?Savings|Vital\s?Savings\s?\w+|Discount.*))|Dental pay\s?plus)$'
+  regex_master: '.*Master.*'
+  except_clinics:
+    - MIDDLEISL
+    - SMITHTOWN
+    - COMMACK
+    - RIVERHEAD
+    - JAMESPORT
+    - NORTHBABYL
+    - MATTITUCK
+    - BAYSHORE
+    - WADINGRVR
+    - TDCMIDDLEI
+    - HICKSVILLE
+    - RVC
+    - VALLEYSTRM
+    - PORTWASH
+    - AMITYVILLE
+    - GARDENCITY
+    - ENDOCOMMAC
+    - BELLEROSE
+    - GREENPOINT
+    - WHITESTONE
+    - WOODSIDE
+    - 5THAVENUE
+    - BRKHEIGHTS
+    - NFLUSHING
+    - NFLUSHING2
+    - WASHSQPARK
+    - HUNTINGTON
+    - MEDFORD
+    - WANTAGH
+    - EASTISLIP
+    - SYOSSET
+    - MASSAPEQUA
+    - EASTMEADOW
+    - FISHKILL
+    - HERALDSQ
+    - ALLERTON
+    - WHITEPLAIN
+    - NEWCITY
+    - CROMWELL
+    - DANBURY
+    - WHARTFORD
+    - NEWWINDSOR
+    - YONKERS
+    - ENC_TOMS
+    - TOMSRIVER
+    - CHESTER
+    - CLIFTON
+    - STATENISLD
+    - ELIZABETH
+    - ENGLISHTOW
+    - LIVINGSTON
+    - MOUNTAINSD
+    - SOMERSET
+    - HOBOKEN
+    - SMITHTO_OS
+    - WILMINGTON
+    - SEWELL
+    - BLUEBELL
+    - MEDIA
+    - SOUDERTOLD
+    - SOUDERTON1
+    - WARMINSTER
+    - WAYNE
+    - WESTCHESTE
+    - ENC_BRICK
+    - BRICK
+    - ENC_JACKS
+    - JACKSON
+    - ENC_LACEY
+    - LACEY
+    - ENC_SHREWS
+    - SHREWSBURY
+    - SHILLINGTO
+    - OLD_SHILLI
+    - BOSTON
+    - WELLESLEY
+    - CHERRYHILL
+    - OLD_CHERRY
+    - MARLTON
+    - OLD_MARLTO
+    - GIBBSBORO
+    - OLD_GIBBS
+    - LINWOOD
+    - OLD_LINWOO
+    - HADDONHEIG
+    - OLD_HADDON
+    - BLACKWOOD
+    - WESTSENEC
+    - BUFFALO
+    - AMHERST
+    - BOONSBORO
+    - EDGEWATER
+    - MIDDLETOWN
+    - ACADEMY
+    - BRINTONLAK
+    - SPRINGFIEL
+    - WOODLYN
+    - ELKINSPARK
+    - MEDFORDNJ
+    - MOORESTOWN
+    - RAHWAY
+    - RANCOCAS
+    - BRIDGETON
+    - DAYTON
+    - LAWRENCEVI
+    - HAMILTONSQ
+    - DOYLESTOWN
+    - LANGHORNE
+    - LAKEWOOD
+    - MANAHAWKIN
+    - BALDWINSVI
+    - CENTRALSQ
+    - SOLVAY
+    - FREDERICK
+    - CATSKILL
+    - NEWPALTZ
+    - POUGHKEEPS
+    - HYDEPARK
+    - WAPPNGRFLL
+    - PINEBUSH
+    - LOUDONVILL
+    - PINEST
+    - REDHOOK
+    - CLIFTONPRK
+    - ALTAMONT
+    - HURLEYAVE
