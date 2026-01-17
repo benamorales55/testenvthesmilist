@@ -14,7 +14,10 @@ def get_records(employer_name:str):
     return data
             
 
-data_response = get_records("THE STATE OF NEW YORK")
+data_response = get_records("MEDICARE DENTAL")
 
-data_response = [plan_api for plan_api in data_response["data"] if plan_api["location_id"] == "AMHERST"]
-print(data_response)
+# data_response = [plan_api for plan_api in data_response["data"] if plan_api["location_id"] == "MEDFORD"]
+# print(len(data_response))
+# print(data_response)
+# for row in data_response:
+#     print(f'{row["location_id"]} {row["plan_employer"]} {row["group_plan_name"]} {row["fee_schedule_id"]} \t {row["plan_group_number"]} \t{row["maximum_benefit_individual"]} \t \t{row["deductible_standard_individual_annual"]} \t{row["carrier"] }')

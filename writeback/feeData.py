@@ -14,7 +14,7 @@ def fee_data():
 
 
 
-    titles = ['Location', 'Payer', '', 'Plan Type/ Plan Name', 'Legacy Tin', 'Smilist Tin', 'State', 'matches']
+    titles = ['Location', 'Payer', '', 'Plan Type/ Plan Name', 'Legacy Tin', 'Smilist Tin', 'State']
     rename_clinics = {
     'HAMILTONSQUARE':'HAMILTONSQ',
     'LAWRENCEVILLE':'LAWRENCEVI',
@@ -83,11 +83,21 @@ def fee_data():
 ]
 
     #rename differents clinics to be equal like config.yaml
-    for row in spreed_fee_data:
+    #old version problems when the client update with new columns the master sheet
+    # for row in spreed_fee_data:
+    #     if bool(row) == True:
+    #         clinic = row[0].upper().replace(' ','')
+    #         if clinic in rename_clinics: clinic = rename_clinics[clinic]
+    #         row[0] = clinic
+
+    for i,row in enumerate(spreed_fee_data):
         if bool(row) == True:
+            row = row[:7]
             clinic = row[0].upper().replace(' ','')
             if clinic in rename_clinics: clinic = rename_clinics[clinic]
             row[0] = clinic
+            spreed_fee_data[i] = row
+
     fee_data = pd.DataFrame(spreed_fee_data, columns=titles)
     fee_data['Row_number'] = range(4, 4 + len(fee_data))
     
@@ -266,3 +276,4 @@ def fee_data():
     print(f"JSON has been write in the path: '{path_file}'.")
 
 fee_data()
+
