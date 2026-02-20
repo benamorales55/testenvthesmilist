@@ -1604,7 +1604,50 @@ elg_clinic:
     - CHESTER
   All_Clinics:
     - Caresource
-  
+
+elg_clinics:
+  dq_mattituck_plan:
+    - MATTITUCK
+  uhccp_plan:
+    - AMITYVILLE
+    - FISHKILL
+    - HICKSVILLE
+    - HUNTINGTON
+    - MASSAPEQUA
+    - NEWCITY
+    - NORTHBABYL
+    - SMITHTOWN
+    - WANTAGH
+    - WHITESTONE
+    - YONKERS
+  uhccp_dual_plan:
+    - AMITYVILLE
+    - BELLEROSE
+    - HICKSVILLE
+    - HUNTINGTON
+    - MASSAPEQUA
+    - SMITHTOWN
+    - WHITESTONE
+  uhccp_nj_plan:
+    - CLIFTON
+    - ENGLISHTOW
+    - MOUNTAINSD
+    - CHESTER
+  caresorce_all_plan:
+    - ALL
+  uhccp_middleisland:
+    - MIDDLEISL  
+  csea_all_plan:
+    - ALL   
+  hmo_uhc_plan:
+    - ALL    
+  dq_fishkill_plan:
+    - FISHKILL  
+  dq_catskill_plan:   
+    - CATSKILL  
+  liberty_mattituck_plan:
+    - MATTITUCK
+
 elg_carriers_clinic: "(?i)^(((United( )?Health( )?Care|UHC|AZUHC)( ?(-?Comm(unity)?)( ?Plan?)?| Delaware)|UHC ?CP.*)|(Delta )?(Dental|Delta).*(KY|Kentucky).*)$|(?i)^ ?(denta quest|dentaquest)|(?i)^((Horizon )?(NJ )(health)).*$"
  
 no_actions_rules:

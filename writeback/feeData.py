@@ -72,7 +72,8 @@ def fee_data():
     # new version at 12/04/2025
     spreed_fee_data = [
     row for row in spreed_fee_data
-    if not str(row[1]).strip().lower().startswith("dental")
+    if row and 
+    not str(row[1]).strip().lower().startswith("dental")
     and (
         str(row[1]).strip().lower() == "ucr"
         or (
@@ -97,6 +98,35 @@ def fee_data():
             if clinic in rename_clinics: clinic = rename_clinics[clinic]
             row[0] = clinic
             spreed_fee_data[i] = row
+
+    #rule for anthem 100,200,300 it came in the first o third position 
+    anthem_re = r"(?i)anthem"
+    def transform_plan(row):
+        if row:
+            anthem_plan_numeric = r'\b(100|200|300)\b'
+            first = re.search(anthem_plan_numeric, row[1])
+            second = re.search(anthem_plan_numeric, row[3])
+            if first:
+                value = first.group(1)
+                row[3] = value
+                print(row)
+                
+            elif second:
+                value = second.group(1)
+                row[3] = value
+            return row
+        else:
+            return row
+        
+    new_data = []
+
+    for row in spreed_fee_data:
+        if row and re.match(anthem_re, row[1], re.IGNORECASE):
+            row = transform_plan(row)  
+        new_data.append(row)
+
+    spreed_fee_data = new_data
+    ## end of the new rule 
 
     fee_data = pd.DataFrame(spreed_fee_data, columns=titles)
     fee_data['Row_number'] = range(4, 4 + len(fee_data))

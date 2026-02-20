@@ -6,7 +6,7 @@ from globalFunctions.script import fillNumberWithZero,GetVar,setLog,print_log
 from globalVariables.script import SUCCESS,data_supplies
 from createGroupName import create_groupName 
 from searchFeeInfo import search_fee_info
-
+anthem_re = r"(?i)^((Anthem.*)|((Bcbs|Bc bs(?!$)|Blue Cross|Blue shield|Blue Cross Blue Shield|Bluecross Blueshield)( (Of )?(Alabama|Arkansas|California|- Kansas|Massachu(s?setts)?|Michigan|Minnesota|Pennsylvania|South Carolina|AL|Ar|CA|KS|MA(SS?)?|Mi|MN|PA|SC|Kc|indemnit))?))$"
 
 def get_group_name(data_supplies):
     global create_groupName,fillNumberWithZero,search_fee_info
@@ -14,9 +14,20 @@ def get_group_name(data_supplies):
         if data_supplies['type_of_verification'] == 'FBD' and 'INACTIVE' not in data_supplies['verification_status'].upper():
             # patient_insurance = eval(GetVar("patient_insurance_info"))
             general_info = (GetVar("bk")) if GetVar("bk") != "" else {}
+
+            #rule for anthem
+            if re.match(anthem_re, data_supplies["carrier_name"]):
+                anthem_plan_num = data_supplies["verification_status"].split("|")[-2].strip()
+                anthem_plan_numeric = r'\b(10|20|30)\b'
+                match_anthem = re.search(anthem_plan_numeric, anthem_plan_num)
+                if match_anthem:
+                    fee_schedule = str(int(match_anthem.group(1)) * 10)
+            #end of rule     
+            else:
+                fee_schedule = general_info['FeeScheduleName']
+                
             
             group_name = general_info["GroupName"]
-            fee_schedule = general_info['FeeScheduleName']
             practice = data_supplies['practice']
             carrier_name = data_supplies['carrier_name']
             smilist_tin = None

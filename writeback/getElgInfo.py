@@ -56,7 +56,18 @@ def get_elg_info(carrier_name: str, group_name: str):
                 'familycare abp' : {"fee_schedule_key": 'CS', "group_number_base": "Plan ABP", "annual_max": "0.00","deductible":"0.00"},
                 'special needs' : {"fee_schedule_key": 'CS', "group_number_base": "Plan Special Needs", "annual_max": "0.00","deductible":"0.00"}
             }
-        }
+        },
+        'Liberty': {
+            'regex': "(?i)^Liberty.*",
+            'fee_schedule': {
+                'LB': 1308
+            },
+            'employer': "EMPTY",
+            "state": 'NY',
+            'plan_logic': {
+                'default': {"fee_schedule_key": 'LB', "group_number_base": "", "annual_max": "99999","deductible":"0.00"}
+            }
+        },
     }
 
     if re.search(static_regex['dentaquest'], data_supplies['carrier_name'],re.IGNORECASE) and data_supplies['practice'].lower() == "fishkill":
@@ -111,7 +122,6 @@ def get_elg_info(carrier_name: str, group_name: str):
         else:
             return None
 
-    print("antess*******")
     if re.search(static_regex['csea_reg'], data_supplies['carrier_name'], re.IGNORECASE):
         print("CSEA regex matched in carrier_name:", data_supplies['carrier_name'])
 
@@ -202,6 +212,23 @@ def get_elg_info(carrier_name: str, group_name: str):
         }
         return info
 
+    if re.search(bots_elg_plan['Liberty']['regex'], data_supplies['carrier_name'],re.IGNORECASE) and data_supplies['practice'].lower() == "mattituck":
+        dental_plan = group_name.split("|")[1].strip()
+        group_number = dental_plan.split('::')[1].strip()
+        if group_number:
+            fee_schedule = fillNumberWithZero(bots_elg_plan['Liberty']['fee_schedule']['LB'])
+            
+            info = {
+                "group_plan" : f"{bots_elg_plan['Liberty']['state']}-MCD-{fee_schedule}",
+                "employer" : bots_elg_plan['Liberty']['employer'],
+                "group_number" : f"{group_number}",
+                "annual_max" : "99999",
+                "deductible_standar" : '0.00'
+            }
+            return info
+        else:
+            return None
+        
 
     for key, val in bots_elg_plan.items():
         if re.search(val['regex'], carrier_name, re.IGNORECASE):
@@ -241,3 +268,8 @@ def get_elg_info(carrier_name: str, group_name: str):
             }
             return info
     return None
+
+info= get_elg_info(data_supplies["carrier_name"],data_supplies["verification_status"]) 
+print(info)
+
+

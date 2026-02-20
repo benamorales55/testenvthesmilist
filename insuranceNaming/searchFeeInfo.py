@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name :str):
-    print(practice,carrier,fee_schedule,group_name)
+    # print(practice,carrier,fee_schedule,group_name)
     # try:
     # route = os.path.dirname(os.path.abspath(__file__))
     # feed_data = f"{route}\\fee_data.json"
@@ -21,7 +21,7 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
     except Exception:
         usuario = "unknown_user"
     
-    print("usuario: {}".format(usuario))
+    # print("usuario: {}".format(usuario))
 
 
     # feed_data = f"{route}\\fee_data\\fee_data_{usuario}.json"
@@ -49,6 +49,8 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
     OutofNetworkYES = bk['OutofNetworkYES'] == 'n'
     PatientOON = bk['PatientOON'] == 'n'
 
+    #new rule anthem condition
+
     def get_nodo_total(plan,carrier_plan):
         plan_actual = plan
         info_nodo = carrier_plan['Plan Type'][plan]
@@ -70,7 +72,7 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
             f"[MasterRow: {data[practice][plan]['Plan Type'][plan]['Row_number']},"
             f"MasterTIN:{data[practice][plan]['Plan Type'][plan]['Smilist TIN']}]|")
         return nodo
-    
+    print("this is the plan type", plan_type)
     if plan_type:
         clinic_nodo = {
             key:values for key, values in data.items()
@@ -113,8 +115,8 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
     
         for plan in no_matching_plans.keys():
             actual_plan = plan.lower().strip()
-            print("working here")
             actual__fee = fee_schedule.lower().strip()
+            actual__fee = re.sub(r"[.,*]", "", actual__fee)
             if actual_plan == actual__fee:
                 original_plan = no_matching_plans[plan]
                 info_nodo = carrier_plan['Plan Type'][original_plan]
@@ -150,3 +152,5 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
             nodo_plan = get_nodo_total(plan_actual,carrier_plan)
             return nodo_plan
     return None
+
+

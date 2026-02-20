@@ -25,4 +25,5 @@ def get_last_record():
 
     return last_record
 
-get_last_record()
+latst= get_last_record()
+print(latst)
