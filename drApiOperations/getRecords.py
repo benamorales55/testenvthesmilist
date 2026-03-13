@@ -14,11 +14,13 @@ def get_records(employer_name:str):
     return data
             
 
-data_response = get_records("THE RETIREE HEALTH AND WELFARE")
+data_response = get_records("Concert Health Inc.")
 
-data_response = [plan_api for plan_api in data_response["data"] if plan_api["location_id"] == "MEDFORD"]
+data_response = [plan_api for plan_api in data_response["data"] ]
 # data_response = [plan_api for plan_api in data_response["data"] ]
 print(len(data_response))
-print(data_response)
+
 for row in data_response:
     print(f'{row["location_id"]} {row["plan_employer"]} {row["group_plan_name"]} {row["fee_schedule_id"]} \t {row["plan_group_number"]} \t{row["maximum_benefit_individual"]} \t \t{row["deductible_standard_individual_annual"]} \t{row["carrier"] }')
+
+

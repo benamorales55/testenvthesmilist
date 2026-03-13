@@ -1647,6 +1647,8 @@ elg_clinics:
     - CATSKILL  
   liberty_mattituck_plan:
     - MATTITUCK
+  ghi_emblem_ny_nj:
+    - ALL        
 
 elg_carriers_clinic: "(?i)^(((United( )?Health( )?Care|UHC|AZUHC)( ?(-?Comm(unity)?)( ?Plan?)?| Delaware)|UHC ?CP.*)|(Delta )?(Dental|Delta).*(KY|Kentucky).*)$|(?i)^ ?(denta quest|dentaquest)|(?i)^((Horizon )?(NJ )(health)).*$"
  

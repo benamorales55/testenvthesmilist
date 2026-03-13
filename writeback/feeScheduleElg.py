@@ -21,7 +21,7 @@ def fee_schedule_elg(dental_plan: str, option: str):
     feed_data = f"{route}\\fee_data.json"
     # feed_data = f"{route}\\fee_data\\fee_data_{usuario}.json"
     data = read_json(feed_data)
-    print(data)
+    #print(data)
     # Diccionario de aliases para normalizar nombres de planes
     plan_name_aliases = {
         "EBF MEMBER PLUS": "EBF",
@@ -89,6 +89,31 @@ def fee_schedule_elg(dental_plan: str, option: str):
                     setLog(f'PLAN DENTAL: {dental_plan} DOES NOT MATCH WITH ANY PLAN IN MASTER')
             else:
                 setLog(f'Dentaquest is not in the clinic {clinic_name}')
+
+
+        elif option_lower == "emblem":
+            nodo = data[clinic_name]['Emblem']['Plan Type']
+            plan_names = [key for key, values in nodo.items() if nodo]
+            
+            plan_words_site = set(dental_plan.lower().split())
+
+            plan_found = None
+            best_length = 0
+
+            for plan in plan_names:
+                plan_words = set(plan.lower().split())
+                
+                
+                if plan_words.issubset(plan_words_site):
+                    if len(plan_words) > best_length:
+                        plan_found = plan  
+                        best_length = len(plan_words)
+            
+            if plan_found and nodo:
+                nodo_plan = nodo[plan_found]
+                return nodo_plan
+            else:
+                setLog(f'PLAN DENTAL: {dental_plan} DOES NOT MATCH WITH ANY PLAN IN MASTER')
     else:
         setLog(f'The clinic {clinic_name} is not in the master.')
 

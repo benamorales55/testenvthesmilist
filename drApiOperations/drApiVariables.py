@@ -28,6 +28,7 @@ hostString = os.getenv('hostString')
 hostGetPatient = os.getenv('hostGetPatient')
 hostGetPlan = os.getenv('hostGetPlan')
 
+
 stringToSign = f"date: {dateUTC}\nhost: {hostString}\napiKey: {apiKey}"
 hmac = b64encode(new(bytes(hmac_secret, "UTF-8"),  bytes(stringToSign, "UTF-8"), sha512).digest()).decode()
 authorization = "hmac username=\"{hmac_user}\", algorithm=\"hmac-sha512\",headers=\"{keysToSign}\",signature=\"{hmac}\""

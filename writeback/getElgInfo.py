@@ -1,10 +1,15 @@
 import sys
 import os
 import re
+from pathlib import Path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from globalVariables.script import data_supplies,static_regex,ELG_PATTERNS
-from globalFunctions.script import fillNumberWithZero,generate_amounts_dict
+from globalFunctions.script import fillNumberWithZero,generate_amounts_dict,read_json
 from feeScheduleElg import fee_schedule_elg
+
+route = Path(__file__).parent.parent
+feed_data = f"{route}\\fee_data.json"
+data = read_json(feed_data)
 
 def get_elg_info(carrier_name: str, group_name: str):
     clinic = data_supplies['practice']  
@@ -68,6 +73,17 @@ def get_elg_info(carrier_name: str, group_name: str):
                 'default': {"fee_schedule_key": 'LB', "group_number_base": "", "annual_max": "99999","deductible":"0.00"}
             }
         },
+        'Emblem': {
+            'regex': "(?i)^(G\s?H\s?I.*)?(EMBLEM.*)?$",
+            'fee_schedule': {
+                'EB': 259
+            },
+            'employer': "EMPTY",
+            "state": '',
+            'plan_logic': {
+                'default': {"fee_schedule_key": 'EB', "group_number_base": "11243287", "annual_max": "3000","deductible":"0.00"}
+            }
+        },    
     }
 
     if re.search(static_regex['dentaquest'], data_supplies['carrier_name'],re.IGNORECASE) and data_supplies['practice'].lower() == "fishkill":
@@ -212,6 +228,63 @@ def get_elg_info(carrier_name: str, group_name: str):
         }
         return info
 
+
+    #NOW THE SEARCH IS STATIC IT IS NOT USE THE MASTER DOCUMENT THIS VERSION USE THE MASTER
+
+    # if re.search(static_regex['emblem'], data_supplies['carrier_name'],re.IGNORECASE) :
+        
+        # info_plan = group_name.split("|")[1].strip()
+        # try:
+        #     group_number = info_plan.split(',')[0].strip()
+        #     employer = info_plan.split(',')[1].strip()
+        #     dental_plan = info_plan.split(',')[2].strip()
+        # except IndexError:
+        #     print('No info for emblem in verification status|')
+        #     return None
+
+        # emblem_data = None
+        
+        # if dental_plan:
+        #     emblem_data = fee_schedule_elg(dental_plan,"emblem")
+
+        # if emblem_data:
+        #     fee_schedule = fillNumberWithZero(emblem_data['Smilist TIN'])
+        #     info = {
+        #         "group_plan" : f"{emblem_data['State']}-PPO-{fee_schedule}",
+        #         "employer" : f"{employer}",
+        #         "group_number" : f"{group_number}",
+        #         "annual_max" : "3000",
+        #         "deductible_standar" : '0.00'
+        #     }
+        #     return info
+        # else:
+        #     return None
+
+    if re.search(static_regex['emblem'], data_supplies['carrier_name'],re.IGNORECASE) :
+       
+        fee_schedule = bots_elg_plan['Emblem']['fee_schedule']["EB"]
+        fee_schedule = fillNumberWithZero(fee_schedule)
+        group_number = f"{bots_elg_plan['Emblem']['plan_logic']['default']['group_number_base']}"
+        annual_max = f"{bots_elg_plan['Emblem']['plan_logic']['default']['annual_max']}"
+        deductible = f"{bots_elg_plan['Emblem']['plan_logic']['default']['deductible']}"
+        clinic = data_supplies["practice"]
+        if data and clinic in data:
+            if "Emblem" in data[clinic]:
+                state = next(iter(data[clinic]['Emblem']["Plan Type"].values()))["State"]
+                info = {
+                    "group_plan": f"{state}-PPO-{fee_schedule}",
+                    "employer": bots_elg_plan['Emblem']['employer'],
+                    "group_number": group_number,
+                    "annual_max": annual_max,
+                    "deductible_standar": deductible
+                }
+                return info
+            else:
+                return None
+        else:
+            return None
+    
+    
     if re.search(bots_elg_plan['Liberty']['regex'], data_supplies['carrier_name'],re.IGNORECASE) and data_supplies['practice'].lower() == "mattituck":
         dental_plan = group_name.split("|")[1].strip()
         group_number = dental_plan.split('::')[1].strip()
@@ -260,7 +333,7 @@ def get_elg_info(carrier_name: str, group_name: str):
                 else:
                     return None
             info = {
-                "group_plan": f"{state}-MCD-{fee_schedule}",
+                "group_plan": f"{state}-PPO-{fee_schedule}",
                 "employer": val['employer'],
                 "group_number": group_number,
                 "annual_max": annual_max,
