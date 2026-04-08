@@ -24,7 +24,8 @@ dashboard:
       value: 5
     - title: "Review Already Rows"
       value: 9
-    
+    - title: "Review Eligibility Dates"
+      value: 8    
 
 server: 1
 
@@ -671,6 +672,22 @@ clinic_settings:
       network_mode: "INN"
       ivf_type: "New"
       office: "Manahawkin"
+    SPLNFIELD:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "693c74f8a87ff75e79479be2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "South Plainfield"
+    2MARLTON:
+      spreadsheet_id: "1qWzB2sNc_EbHsfqJPA3fNWM2aB4J8vPO9liiD0VDbbM"
+      clinic_id: "645bb62d036d615d2ab29a0c"
+      clinic_name: "The smilist 05"
+      practice_id : "698cba84acf68967c026e7b2"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "2 Marlton"
     # TS06
     WHARTFORD:
       spreadsheet_id: "13_HUlLKk-GDxlqBZ801_QLmhF_XPVgss4bzT_Ucq_c8"
@@ -1060,6 +1077,39 @@ clinic_settings:
       network_mode: "INN"
       ivf_type: "New"
       office: "Kingston hurley"
+    ALBANY:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "696a88e53fa9537aaa04dd84"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Albany"    
+    EASTGREEN:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "696a88e53fa9537aaa04dd83"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "E Greenbush"
+    OMSCLIFPRK:
+      spreadsheet_id: "1ch5PxBvHJbddJA7FzneWql9m3AJvUN57NnZgDq2sDgk"
+      clinic_id: "689e1812a6904fc8b4059c82"
+      clinic_name: "The smilist 10"
+      practice_id : "696a88e53fa9537aaa04dd82"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Clifton Park OMS"
+    # TS11
+    ARLINGTON:
+      spreadsheet_id: "1OfCuqQGXllO7x2PB18dRjzTtdoXjNaZpJ0lvVMTsOTE"
+      clinic_id: "69978be5e0af58f7377f83d2"
+      clinic_name: "The smilist 11"
+      practice_id : "69979a0db72e38545879d292"
+      network_mode: "INN"
+      ivf_type: "New"
+      office: "Arlington"
       
 
     # to test !!
@@ -1220,7 +1270,6 @@ shortCarriersNames:
   Lincoln Financial: LF
   New BCBS: BCBS
   Anthem BCBS: BCBS
-  MetLife: MET
   Premera: PREM
   Geha: GEHA
   Delta Dental Toolkit API: DD Toolkit
@@ -1279,9 +1328,22 @@ shortCarriersNames:
   UMR: UMR
   Liberty Dental Plan: LIBERTY DP
   Always Assist: ALWAYS ASSIST
+  Benesys: BENESYS
   Excellus: EXCELLUS
   Fidelio Dental: FIDELIO DENTAL
   Nova: Nova
+  Northeast Delta Dental: NORTHEAST DD
+  Univera: UNIVERA
+  MetLife API: MET
+  Loomis: LOOMIS
+  Dentegra: DENTEGRA
+  Daniel H Cook: DANIEL H C
+  Capital Blue Cross: CBC
+  Reliance Standard: RSLI
+  Beam: Beam
+  Mutual of Omaha: MOO
+  Lineco: LINECO
+
  
 city_names: ["JOHNSTON","Stevens Point","Mechanicsburg","Glen Mills", "Rocky Hill", "Clinton","Belleville","Farmington Hills", "Aberdeen", "Abilene", "Chaltanooga","Akron", "Albany", "Albuquerque", "Alexandria", "Allentown", "Amarillo", "Anaheim", "Anchorage", "Ann Arbor", "Antioch", "Apple Valley", "Appleton", "Arlington", "Arvada", "Asheville", "Athens", "Atlanta", "Atlantic City", "Augusta", "Aurora", "Austin", "Bakersfield", "Baltimore", "Barnstable", "Baton Rouge", "Beaumont", "Bel Air", "Bellevue", "Berkeley", "Bethlehem", "Billings", "Birmingham", "Bloomington", "Boise", "Boise City", "Bonita Springs", "Boston", "Boulder", "Bradenton", "Bremerton", "Bridgeport", "Brighton", "Brownsville", "Bryan", "Buffalo", "Burbank", "Burlington", "Cambridge", "Canton", "Cape Coral", "Carrollton", "Cary", "Cathedral City", "Cedar Rapids", "Champaign", "Chandler", "Charleston", "Charlotte", "Chattanooga", "Chesapeake", "Chicago", "Chula Vista", "Cincinnati", "Clarke County", "Clarksville", "Clearwater", "Cleveland", "College Station", "Colorado Springs", "Columbia", "Columbus", "Concord", "Coral Springs", "Corona", "Corpus Christi", "Costa Mesa", "Dallas", "Daly City", "Danbury", "Davenport", "Davidson County", "Dayton", "Daytona Beach", "Deltona", "Denton", "Denver", "Des Moines", "Detroit", "Downey", "Duluth", "Durham", "El Monte", "El Paso", "Elizabeth", "Elk Grove", "Elkhart", "Erie", "Escondido", "Eugene", "Evansville", "Fairfield", "Fargo", "Fayetteville", "Fitchburg", "Flint", "Fontana", "Fort Collins", "Fort Lauderdale", "Fort Smith", "Fort Walton Beach", "Fort Wayne", "Fort Worth", "Frederick", "Fremont", "Fresno", "Fullerton", "Gainesville", "Garden Grove", "Garland", "Gastonia", "Gilbert", "Glendale", "Grand Prairie", "Grand Rapids", "Grayslake", "Green Bay", "GreenBay", "Greensboro", "Greenville", "Gulfport-Biloxi", "Hagerstown", "Hampton", "Harlingen", "Harrisburg", "Hartford", "Havre de Grace", "Hayward", "Hemet", "Henderson", "Hesperia", "Hialeah", "Hickory", "High Point", "Hollywood", "Honolulu", "Houma", "Houston", "Howell", "Huntington", "Huntington Beach", "Huntsville", "Independence", "Indianapolis", "Inglewood", "Highland Mills", "Irvine", "Irving", "Jackson", "Jacksonville", "Jefferson", "Jersey City", "Johnson City", "Joliet", "Kailua", "Kalamazoo", "Kaneohe", "Kansas City", "Kennewick", "Kenosha", "Killeen", "Kissimmee", "Knoxville", "Lacey", "Lafayette", "Lake Charles", "Lakeland", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Cruces", "Las Vegas", "Layton", "Leominster", "Lewisville", "Lexington", "Lincoln", "Little Rock", "Long Beach", "Lorain", "Los Angeles", "Louisville", "Lowell", "Lubbock", "Macon", "Madison", "Manchester", "Marina", "Marysville", "Middletown", "Meriden", "McAllen", "McHenry", "Medford", "Melbourne", "Memphis", "Merced", "Mesa", "Mesquite", "Miami", "Milwaukee", "Minneapolis", "Miramar", "Mission Viejo", "Mobile", "Modesto", "Monroe", "Monterey", "Montgomery", "Moreno Valley", "Murfreesboro", "Murrieta", "Muskegon", "Myrtle Beach", "Naperville", "Naples", "Nashua", "Nashville", "New Bedford", "New Haven", "New London", "New Windsor", "New Orleans", "New York", "New York City", "Newark", "Newburgh", "New Milford", "Newport News", "Norfolk", "Normal", "Norman", "North Charleston", "North Las Vegas", "North Port", "Norwalk", "Norwich", "Oakland", "Ocala", "Oceanside", "Odessa", "Ogden", "Oklahoma City", "Olathe", "Olympia", "Omaha", "Ontario", "Orange", "Orem", "Orlando", "Overland Park", "Oxnard", "Palm Bay", "Palm Springs", "Palmdale", "Panama City", "Pasadena", "Paterson", "Pembroke Pines", "Pensacola", "Peoria", "Philadelphia", "Phoenix", "Pittsburgh", "Plano", "Pomona", "Pompano Beach", "Port Arthur", "Port Orange", "Port Saint Lucie", "Port St. Lucie", "Portland", "Portsmouth", "Poughkeepsie", "Providence", "Provo", "Pueblo", "Punta Gorda", "Racine", "Raleigh", "Rancho Cucamonga", "Reading", "Redding", "Reno", "Richland", "Richmond", "Richmond County", "Riverside", "Roanoke", "Rochester", "Rockford", "Roseville", "Round Lake Beach", "Sacramento", "Saginaw", "Saint Louis", "Saint Paul", "Saint Petersburg", "Salem", "Salinas", "Salt Lake City", "San Antonio", "San Bernardino", "San Buenaventura", "San Diego", "San Francisco", "San Jose", "Santa Ana", "Santa Barbara", "Santa Clara", "Santa Clarita", "Santa Cruz", "Santa Maria", "Santa Rosa", "Sarasota", "Savannah", "Scottsdale", "Scranton", "Seaside", "Seattle", "Sebastian", "Shreveport", "Simi Valley", "Sioux City", "Sioux Falls", "South Bend", "South Lyon", "Spartanburg", "Spokane", "Springdale", "Springfield", "St. Louis", "St. Paul", "St. Petersburg", "Stamford", "Sterling Heights", "Stockton", "Sunnyvale", "Syracuse", "Tacoma", "Tallahassee", "Tampa", "Temecula", "Tempe", "Thornton", "Thousand Oaks", "Toledo", "Topeka", "Torrance", "Trenton", "Tucson", "Tulsa", "Tuscaloosa", "Tyler", "Utica", "Vallejo", "Vancouver", "Vero Beach", "Victorville", "Virginia Beach", "Visalia", "Waco", "Warren", "Wethersfield", "West Haven", "Washington", "Waterbury", "Waterloo", "West Covina", "West Hartford", "West Valley City", "Westminster", "Wichita", "Wilmington", "Winston", "Weston", "Winter Haven", "Worcester", "Yakima", "Yonkers", "York", "Youngstown","Alpharetta","Lisle","Eagan","Latham"]
 
@@ -1308,6 +1370,7 @@ isExtractionTypeReport: False
 input_wrapper_services:
   update_phone_in_insurance_plan_information: True
   update_payer_default: True
+  review_fee_schedule: True
   review_overlap: True
   select_default_table:
     state: True
@@ -1527,7 +1590,7 @@ write_back_rules:
     default_values:
       99999: ["AnnualMaximum"]
       0.00: ["AmountUsedToDate", "Deductible", "Family", "Met_Deductible"]
-    default_regex: "no|\\$NaN|not covered|unlimited|none|n/a|-|no cigna dppo advantage deductible|this program has no deductibles.|not applicable|n/avail|not available|info not available|deductible does not apply|there is no deductible for this contract"
+    default_regex: "no|$|NaN|not covered|unlimited|none|n/a|-|no cigna dppo advantage deductible|this program has no deductibles.|not applicable|n/avail|not available|info not available|deductible does not apply|there is no deductible for this contract"
     exceptions_regex: "Empty"
     regex_unlimited: "none|unlimited|Unlimited|$9,999,999.99|$9999999.99|$99,999,999.99"
     calculated_values:
@@ -1573,6 +1636,7 @@ hmoRules:
     - TOMSRIVER
     - WARMINSTER
     - WILMINGTON
+    - FISHKILL
     
 elg_clinic:
   Dentaquest:
@@ -1646,12 +1710,10 @@ elg_clinics:
   dq_catskill_plan:   
     - CATSKILL  
   liberty_mattituck_plan:
-    - MATTITUCK
+    - MATTITUCK  
   ghi_emblem_ny_nj:
-    - ALL        
-  edp_plan:
-    - ALL
-
+    - ALL    
+  
 elg_carriers_clinic: "(?i)^(((United( )?Health( )?Care|UHC|AZUHC)( ?(-?Comm(unity)?)( ?Plan?)?| Delaware)|UHC ?CP.*)|(Delta )?(Dental|Delta).*(KY|Kentucky).*)$|(?i)^ ?(denta quest|dentaquest)|(?i)^((Horizon )?(NJ )(health)).*$"
  
 no_actions_rules:
@@ -1784,3 +1846,8 @@ no_actions_rules:
     - CLIFTONPRK
     - ALTAMONT
     - HURLEYAVE
+    - SPLNFIELD
+    - ALBANY
+    - EASTGREEN
+    - OMSCLIFPRK
+    - ARLINGTON

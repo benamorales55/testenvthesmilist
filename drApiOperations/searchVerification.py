@@ -48,6 +48,8 @@ def search_verifications(row_data:dict = {}):
             }}
             response = get(hostGetPatient, headers=headers, params = params)
             data = loads(response.content)
+            print("the data from response it is ")
+            print(data)
             if data["data"]: results+= data["data"]
         
             # # # print(results)
@@ -84,9 +86,11 @@ def search_verifications(row_data:dict = {}):
 
 
 values = search_verifications(data_supplies)
-print(len(values))
+print(len([]))
 print(values)
 
 for row in values:
     print(row["CarrierName"],row["type"],row["MemberID"],row["driveFiles"],row["audited"],row["policyType"])
     print()
+
+

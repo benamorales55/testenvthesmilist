@@ -76,6 +76,7 @@ def fee_data():
     not str(row[1]).strip().lower().startswith("dental")
     and (
         str(row[1]).strip().lower() == "ucr"
+        or str(row[1]).strip().lower() == "edp"
         or (
             len(row) >= 7
             and all(str(row[i]).strip() != "" for i in (0, 1, 3, 5, 6))
@@ -137,7 +138,10 @@ def fee_data():
     # # SetVar("practice", iv_config['clinic_settings']['settings'][practice]['clinic_name'])
     # carriers = { obj.name: obj.regex for obj in get_carriers_per_client().bots }
     carriers = carriers_regex
-    carriers.update({'UCR':"^UCR$"})
+    carriers.update({
+    'UCR': r'(?i)^UCR$',
+    'EDP': r'(?i)^EDP$'
+    })
     # # # SetVar("practice", practice)
     regular_expresions = carriers
 

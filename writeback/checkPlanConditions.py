@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from globalVariables.script import ELG_PATTERNS,data_supplies,static_regex,iv_config
-from globalFunctions.script import clean_regex,get_info,read_json
+from globalFunctions.script import clean_regex,get_info,read_json,setLog
 
 
 
@@ -34,6 +34,7 @@ class PlanRule:
 
         practice = data_supplies['practice'].lower()
         allowed_practice = [p.lower() for p in iv_config['elg_clinics'].get(self.name) or []]
+        print(allowed_practice)
         
         if "all" not in allowed_practice and practice not in allowed_practice:
             return False
@@ -44,6 +45,28 @@ class PlanRule:
             
 
         if self.name == "ghi_emblem_ny_nj" and data:
+            group_name_base = "1199 SEIU NBF"
+            group_name = data_supplies.get('verification_status', '')
+            group_name_emblem = None
+
+            if isinstance(group_name, str) and '|' in group_name:
+                parts = group_name.split("|")
+                if len(parts) > 1:
+                    group_name_emblem = parts[1].strip()
+
+                    if ',' in group_name_emblem:
+                        subparts = group_name_emblem.split(',')
+                        if len(subparts) > 1:
+                            group_name_emblem = subparts[1].strip()
+                        else:
+                            setLog('No group number after comma')
+                    else:
+                        setLog('No comma in emblem info')
+                else:
+                    setLog('No second part after "|"')
+            else:
+                setLog('Invalid or missing key of verification_status')
+
             nodo_practice = data.get(data_supplies["practice"], {})
             emblem_node = nodo_practice.get("Emblem")
             if not emblem_node:
@@ -54,9 +77,9 @@ class PlanRule:
 
             states = {plan_info.get("State") for plan_info in plan_types.values() }
 
-            if not states.intersection({"NY", "NJ"}):
+            if not states.intersection({"NY", "NJ"}) and not group_name_base.upper() in group_name_emblem.upper():
                 return False
-            
+            # print(group_name_base)
 
 
         for key in self.verification_include:
@@ -153,7 +176,11 @@ plans = [
     PlanRule(
         name = 'ghi_emblem_ny_nj',
         carrier_regex = static_regex['emblem']
-    )                                                     
+    ),
+    PlanRule(
+        name = 'edp_plan',
+        carrier_regex = static_regex['edp']
+    )                                                             
 ]    
 
 
