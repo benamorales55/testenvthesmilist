@@ -74,6 +74,10 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
         return nodo
     print("this is the plan type", plan_type)
     if plan_type:
+        best_match = None
+        best_percentage = 0
+        best_plan_key = None
+
         clinic_nodo = {
             key:values for key, values in data.items()
             if key.lower().strip() == practice.lower()
@@ -101,17 +105,24 @@ def search_fee_info(practice : str, carrier : str, fee_schedule: str,group_name 
         print("carrier plan ", no_matching_plans)
         for plan in no_matching_plans.keys():
             percentage = int(SM(None,plan.lower(), group_name.lower()).ratio() * 100)
-            if percentage >= 75:
-                original_plan = no_matching_plans[plan]
-                info_nodo = carrier_plan['Plan Type'][original_plan]
-                nodo_plan = {'PPO':info_nodo}
-                setLog(f"note:The fee schedule was selected by GROUP NAME"
-                    f"[GroupName: {plan},MasterRow: {info_nodo['Row_number']},SmilistTin: {info_nodo['Smilist TIN']}]")
-                return nodo_plan
-            else:
-                if percentage < 80 and percentage > 70:
-                    setLog(f"note:The percentage between Group Name and Master Data is {percentage}"
-                        f"review if the name [{plan}] in the Master is correct")
+            
+            if percentage > best_percentage:
+                best_percentage = percentage
+                best_plan_key = plan
+
+            
+        if best_percentage >= 75 and best_plan_key:
+            original_plan = no_matching_plans[best_plan_key]
+            
+            info_nodo = carrier_plan['Plan Type'][original_plan]
+            nodo_plan = {'PPO':info_nodo}
+            setLog(f"note:The fee schedule was selected by GROUP NAME"
+                f"[GroupName: {plan},MasterRow: {info_nodo['Row_number']},SmilistTin: {info_nodo['Smilist TIN']}]")
+            return nodo_plan
+        else:
+            if percentage < 80 and percentage > 70:
+                setLog(f"note:The percentage between Group Name and Master Data is {percentage}"
+                    f"review if the name [{plan}] in the Master is correct")
     
         for plan in no_matching_plans.keys():
             actual_plan = plan.lower().strip()
