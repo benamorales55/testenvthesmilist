@@ -264,8 +264,8 @@ def fee_data():
             
             if element["Carrier"] not in master_fee[location]:
                 master_fee[location][element["Carrier"]] = {'regex': element["regex"], 'Plan Type': {}}
-
-            plan_type = get_plan_type(element["Plan Type"])
+    
+            plan_type = get_plan_type(element["Plan Type"]) 
             plan_type_by_payer = get_plan_type_by_payer(element["Payer"])
             plan_type = combinar_sin_duplicados(plan_type,plan_type_by_payer)
             pre_afi = element["PreAffiliation TIN"]

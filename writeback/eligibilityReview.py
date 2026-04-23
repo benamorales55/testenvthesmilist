@@ -214,35 +214,87 @@
 import re 
 from datetime import datetime
 
+# def parse_date(date_str):
+#     """Convierte varias representaciones de fecha a formato MM/DD/YYYY."""
+#     formats = [
+#         "%m/%d/%Y",           # formato americano
+#         "%Y-%m-%d",           # ISO simple
+#         "%Y-%m-%dT%H:%M:%S"   # ISO con tiempo
+#     ]
+#     for fmt in formats:
+#         try:
+#             return datetime.strptime(date_str, fmt).strftime("%m/%d/%Y")
+#         except ValueError:
+#             continue
+#     return ""  # si no coincide con ningún formato válido
+
+
+#OLD FUNCION 
+# def extract_effective_and_term_dates(verification_status):
+#     regex_date = r"(\d{1,2}/\d{1,2}/\d{4}|\d{4}-\d{2}-\d{2}|N/A|-|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})"
+#     match = re.search(rf"{regex_date}\s*-\s*{regex_date}", verification_status)
+
+#     effectivedate, term_date = "", ""
+
+#     if match:
+#         raw_effective = match.group(1).strip()
+#         raw_term = match.group(2).strip()
+
+#         effectivedate = parse_date(raw_effective)
+#         term_date = parse_date(raw_term)
+
+#     print(f"*********effectivedate: {effectivedate}, term_date: {term_date}")
+#     return effectivedate, term_date
+ 
 def parse_date(date_str):
-    """Convierte varias representaciones de fecha a formato MM/DD/YYYY."""
+    if not date_str or not isinstance(date_str, str):
+        return ""
     formats = [
-        "%m/%d/%Y",           # formato americano
-        "%Y-%m-%d",           # ISO simple
-        "%Y-%m-%dT%H:%M:%S"   # ISO con tiempo
+        "%m/%d/%Y",
+        "%Y-%m-%d",
+        "%Y-%m-%dT%H:%M:%S"
     ]
     for fmt in formats:
         try:
             return datetime.strptime(date_str, fmt).strftime("%m/%d/%Y")
         except ValueError:
             continue
-    return ""  # si no coincide con ningún formato válido
+    return ""
+
 
 def extract_effective_and_term_dates(verification_status):
-    regex_date = r"(\d{1,2}/\d{1,2}/\d{4}|\d{4}-\d{2}-\d{2}|N/A|-|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})"
-    match = re.search(rf"{regex_date}\s*-\s*{regex_date}", verification_status)
-
+    import re
+    pattern = r'(\d{1,2}/\d{1,2}/\d{4}|\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})\s*-\s*(\d{1,2}/\d{1,2}/\d{4}|\d{4}-\d{2}-\d{2}|\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}|N/A|-)'
+    match = re.search(pattern, verification_status)
     effectivedate, term_date = "", ""
-
     if match:
         raw_effective = match.group(1).strip()
         raw_term = match.group(2).strip()
-
         effectivedate = parse_date(raw_effective)
-        term_date = parse_date(raw_term)
-
+        term_date = None if raw_term.upper() == "N/A" else parse_date(raw_term)
     print(f"*********effectivedate: {effectivedate}, term_date: {term_date}")
-    return effectivedate, term_date
- 
-dates,date2 = extract_effective_and_term_dates("Active/ Plan Medicare / HMO C-SNP | 01/01/2026 - 12/31/2026")
-print(dates,date2)
+    return effectivedate, term_date 
+
+def last_day_next_month(fecha):
+    from datetime import datetime, timedelta
+    date_obj = datetime.strptime(fecha, '%Y-%m-%d')
+    
+    if date_obj.month == 12:
+        first_day_next_month = datetime(date_obj.year + 1, 1, 1)
+    else:
+        first_day_next_month = datetime(date_obj.year, date_obj.month + 1, 1)
+    
+    last_day_next_month = first_day_next_month + timedelta(days=31)
+    last_day_next_month = last_day_next_month.replace(day=1) - timedelta(days=1)
+    return last_day_next_month.strftime('%m/%d/%Y')
+
+start_date,end_date = extract_effective_and_term_dates("Active | Sunrise Dental Plan(plan brochure)| 09/09/2005 - N/A")
+print(start_date,end_date)
+
+if not end_date :
+    end_date = last_day_next_month("2026-04-27")
+
+fecha1 = datetime.strptime(start_date, "%m/%d/%Y")
+fecha2 = datetime.strptime(end_date, "%m/%d/%Y")
+
+print(datetime.strptime(start_date,"%m/%d/%Y") > datetime.strptime(end_date,"%m/%d/%Y"))

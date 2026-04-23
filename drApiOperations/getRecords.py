@@ -12,15 +12,21 @@ def get_records(employer_name:str):
     response = get(url,headers=headers)
     data = loads(response.content)
     return data
-            
 
-data_response = get_records("Concert Health Inc.")
+def delete_record(id):
+    url = f"{hostGetPlan}/{id}"
+    response = get(url,headers=headers)
+    print(response)
+    print(f"{id} has been deleted")
+
+data_response = get_records("EMPTY")
 
 data_response = [plan_api for plan_api in data_response["data"] ]
 # data_response = [plan_api for plan_api in data_response["data"] ]
 print(len(data_response))
 
 for row in data_response:
-    print(f'{row["location_id"]} {row["plan_employer"]} {row["group_plan_name"]} {row["fee_schedule_id"]} \t {row["plan_group_number"]} \t{row["maximum_benefit_individual"]} \t \t{row["deductible_standard_individual_annual"]} \t{row["carrier"] }')
+    if row["carrier"] =="EDP":
+        print(f'{row["id"]} {row["location_id"]} {row["plan_employer"]} {row["group_plan_name"]} {row["fee_schedule_id"]} \t {row["plan_group_number"]} \t{row["maximum_benefit_individual"]} \t \t{row["deductible_standard_individual_annual"]} \t{row["carrier"] }')
 
 

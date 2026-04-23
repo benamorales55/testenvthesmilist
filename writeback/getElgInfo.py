@@ -83,7 +83,7 @@ def get_elg_info(carrier_name: str, group_name: str):
             'plan_logic': {
                 'default': {"fee_schedule_key": 'EB', "group_number_base": "11243287", "annual_max": "3000","deductible":"0.00"}
             }
-        },    
+        },        
     }
 
     if re.search(static_regex['dentaquest'], data_supplies['carrier_name'],re.IGNORECASE) and data_supplies['practice'].lower() == "fishkill":
@@ -284,6 +284,24 @@ def get_elg_info(carrier_name: str, group_name: str):
         else:
             return None
     
+    if re.search(static_regex['edp'], data_supplies['carrier_name'],re.IGNORECASE):
+        nodo = data.get(data_supplies['practice'].upper(),{}).get("EDP")
+        plan_dict = nodo.get("Plan Type", {})
+        if plan_dict:
+            state = next(iter(plan_dict.values())).get("State")
+            fee_schedule = next(iter(plan_dict.values())).get("Smilist TIN")
+            group_number = "Discount EDP"
+            info = {
+                "group_plan" : f"{state}-DSC-{fee_schedule}",
+                "employer" : "EMPTY",
+                "group_number" : f"{group_number}",
+                "annual_max" : "99999",
+                "deductible_standar" : '0.00'
+            }
+            return info
+        else:
+            return None
+        
     
     if re.search(bots_elg_plan['Liberty']['regex'], data_supplies['carrier_name'],re.IGNORECASE) and data_supplies['practice'].lower() == "mattituck":
         dental_plan = group_name.split("|")[1].strip()
@@ -344,5 +362,6 @@ def get_elg_info(carrier_name: str, group_name: str):
 
 info= get_elg_info(data_supplies["carrier_name"],data_supplies["verification_status"]) 
 print(info)
+
 
 

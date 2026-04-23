@@ -34,7 +34,6 @@ class PlanRule:
 
         practice = data_supplies['practice'].lower()
         allowed_practice = [p.lower() for p in iv_config['elg_clinics'].get(self.name) or []]
-        print(allowed_practice)
         
         if "all" not in allowed_practice and practice not in allowed_practice:
             return False
@@ -42,7 +41,15 @@ class PlanRule:
         if self.carrier_regex:
             if not self.carrier_regex.search(data_supplies['carrier_name']):
                 return False
-            
+
+        if self.name == "edp_plan":
+            nodo = data.get(practice.upper(),{}).get("EDP")
+            if not nodo:
+                return False
+            plan_dict = nodo.get("Plan Type", {})
+            state = next(iter(plan_dict.values())).get("State")
+            if state != "NY":
+                return False
 
         if self.name == "ghi_emblem_ny_nj" and data:
             group_name_base = "1199 SEIU NBF"
@@ -76,8 +83,12 @@ class PlanRule:
             plan_types = emblem_node.get("Plan Type",{})
 
             states = {plan_info.get("State") for plan_info in plan_types.values() }
-
-            if not states.intersection({"NY", "NJ"}) and not group_name_base.upper() in group_name_emblem.upper():
+            print("testing first", group_name_base.upper() in group_name_emblem.upper())
+            print("testing first", states)
+            print(group_name_emblem)
+            print(states)
+            if not (states.intersection({"NY", "NJ"}) and group_name_base.upper() in group_name_emblem.upper()):
+                print("ENTERING HERE")
                 return False
             # print(group_name_base)
 

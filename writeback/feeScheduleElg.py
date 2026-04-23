@@ -114,8 +114,10 @@ def fee_schedule_elg(dental_plan: str, option: str):
                 return nodo_plan
             else:
                 setLog(f'PLAN DENTAL: {dental_plan} DOES NOT MATCH WITH ANY PLAN IN MASTER')
+
     else:
         setLog(f'The clinic {clinic_name} is not in the master.')
 
     return None
 
+fee_schedule_elg("disc","edp")
